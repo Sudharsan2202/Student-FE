@@ -11,7 +11,7 @@ function StudentForm() {
         e.preventDefault();
         console.log("AssignesMentor",assignmentor)
         console.log(name,batch,assignmentor)
-        const posted_stud = await axios.post(`http://localhost:3000/Students`,{name,email,batch,mentor: assignmentor})
+        const posted_stud = await axios.post(`https://student-mentor-p7hy.onrender.com/Students`,{name,email,batch,mentor: assignmentor})
         console.log(posted_stud.data);
         setStudents([...students,posted_stud.data])
         setname('');setemail('');setBatch('');setassignMentor('');

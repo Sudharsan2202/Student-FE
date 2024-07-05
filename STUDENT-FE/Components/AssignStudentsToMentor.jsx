@@ -33,8 +33,8 @@ function AssignStudentsToMentor() {
         const stud_list = selectedStudents.map(stud => { return stud.value})
         /* console.log("value sent to api")
         console.log(stud_list,mentor); */
-        await axios.patch(`http://localhost:3000/Students/assign-mentor-students`,{mentor,stud_list})
-        const stud_data = await axios.get(`http://localhost:3000/Students/`)
+        await axios.patch(`https://student-mentor-p7hy.onrender.com/Students/assign-mentor-students`,{mentor,stud_list})
+        const stud_data = await axios.get(`https://student-mentor-p7hy.onrender.com/Students/`)
         console.log(stud_data.data) 
         setStudents(stud_data.data)
     }
