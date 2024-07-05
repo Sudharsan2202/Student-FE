@@ -6,7 +6,7 @@ export const AssignMentorsContext = React.createContext();
 export const AssignMentorProvider = ({children}) => {
     const [students,setStudents] = useState([]);
     const [mentors,setMentors] = useState([]);
-   
+    const BaseURL = `https://student-mentor-p7hy.onrender.com`;
     const fetchData = async () => {
         await axios.get(`https://student-mentor-p7hy.onrender.com/Mentors`)
         .then(response => setMentors(response.data)).then(() => console.log(mentors));
